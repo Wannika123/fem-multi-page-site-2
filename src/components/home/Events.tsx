@@ -67,6 +67,7 @@ export default function Events() {
                             tabletSrc={event.image.tablet}
                             desktopSrc={event.image.desktop}
                             alt={event.image.alt}
+                            sizes='(max-width: 1040px) 100vw, 50vw'
                         />
                     </div>
                 ))}

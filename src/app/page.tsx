@@ -19,6 +19,7 @@ export default function Home() {
           tabletSrc={tabletHero}
           desktopSrc={desktopHero}
           alt="Shrimp pasta"
+          sizes="100vw"
         />
       </div>
 

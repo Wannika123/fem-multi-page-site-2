@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [github repo](https://github.com/Wannika123/fem-multi-page-site-2)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [vercel](https://fem-multi-page-site-2-6d45.vercel.app/)
 
 ## My process
 
@@ -50,6 +50,7 @@ Users should be able to:
 ### What I learned
 
 - Never underestimate the form. I try to make it as accessible as possible. Also, I'm still not very comfortable with building custom select component, it took me so long.
+- I also learn more about NextJS's Image component. I try to use it to its full capacity, and I'm quite satisfied at how fast the page seems to be.
 
 ### Useful resources
 

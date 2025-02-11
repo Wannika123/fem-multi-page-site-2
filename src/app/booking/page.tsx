@@ -18,6 +18,7 @@ export default function BookingPage() {
                     tabletSrc={heroTablet}
                     desktopSrc={heroDesktop}
                     alt=''
+                    sizes='100vw'
                 />
                 <Image src={curve} alt='' className={styles.curve} />
             </div>

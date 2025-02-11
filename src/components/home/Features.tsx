@@ -24,6 +24,7 @@ export default function Features() {
                         tabletSrc={enjoyTablet}
                         desktopSrc={enjoyDesktop}
                         alt='The lanscape of the countryside, with hills and stream.'
+                        sizes='(max-width: 1040px) 100vw, 50vw'
                     />
                 </div>
                 <div className={styles['text-container']}>
@@ -42,6 +43,7 @@ export default function Features() {
                         tabletSrc={localTablet}
                         desktopSrc={localDesktop}
                         alt='The close-up look of the dish, a hand holding a spoon is about to scoop the dish'
+                        sizes='(max-width: 1040px) 100vw, 50vw'
                     />
                     <Image src={lines} alt='' className={styles.lines} />
                 </div>
