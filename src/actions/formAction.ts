@@ -3,8 +3,9 @@
 import { toCamelCase } from "@/utils/formatString";
 import { validateInputs } from "@/utils/validateInputs";
 import { redirect } from "next/navigation";
+import { InvalidInputsType } from "@/components/booking/Form";
 
-export async function reserveFormAction(prevState: any, formData: FormData) {
+export async function reserveFormAction(prevState: Partial<InvalidInputsType>, formData: FormData) {
     console.log(prevState);
 
     // When working with forms that have many fields, you may want to consider 
@@ -16,7 +17,7 @@ export async function reserveFormAction(prevState: any, formData: FormData) {
     const rawFormData = Object.fromEntries(formData);
     const rawFormDataArr = Object.entries(rawFormData);
 
-    const isInvalidInputs: any = {}
+    const isInvalidInputs: Partial<InvalidInputsType> = {}
 
     rawFormDataArr.forEach(entry => {
         if (/\$ACTION/.test(entry[0])) return;
@@ -26,7 +27,9 @@ export async function reserveFormAction(prevState: any, formData: FormData) {
         const isValid = validateInputs(value, camelKey)
 
         if (!isValid) {
-            isInvalidInputs[camelKey] = true
+            if (camelKey === 'name' || camelKey === 'email' || camelKey === 'dateMonth' || camelKey === 'dateDay' || camelKey === 'dateYear' || camelKey === 'timeHour' || camelKey === 'timeMin') {
+                isInvalidInputs[camelKey] = true
+            }           
         }
     })
 

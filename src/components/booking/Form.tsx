@@ -23,7 +23,7 @@ const INITIAL_VALUES = {
 
 export type KeyNames = keyof typeof INITIAL_VALUES;
 
-type InvalidInputsType = {
+export type InvalidInputsType = {
     [index in KeyNames]: boolean
 }
 
@@ -36,15 +36,15 @@ const ERR_MESSAGES = {
 
 export default function Form() {
 
-    const keys = Object.keys(INITIAL_VALUES);
-
     const [inputVals, setInputVals] = useState(INITIAL_VALUES);
-    const [invalidInputs, setInvalidInputs] = useState<InvalidInputsType>(() => {
-        const value = keys.reduce((obj: any, key) => {
-            obj[key] = false
-            return obj
-        }, {})
-        return value
+    const [invalidInputs, setInvalidInputs] = useState<InvalidInputsType>({
+        name: false,
+        email: false,
+        dateMonth: false,
+        dateDay: false,
+        dateYear: false,
+        timeHour: false,
+        timeMin: false
     })
     const [numPeople, setNumPeople] = useState(1);
 
