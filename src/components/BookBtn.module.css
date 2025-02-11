@@ -1,0 +1,31 @@
+.button {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    letter-spacing: 0.15625rem;
+    padding: 24px 54px;
+    display: inline-block;
+}
+
+.light {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.light:hover {
+    background-color: white;
+    color: var(--Cod-gray);
+    transition: all 0.2s;
+}
+
+.dark {
+    background-color: var(--Cod-gray);
+    color: white;
+    border: 1px solid var(--Cod-gray);
+}
+
+.dark:hover {
+    background-color: white;
+    color: var(--Cod-gray);
+    transition: all 0.2s;
+}

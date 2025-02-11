@@ -1,0 +1,66 @@
+.container {
+    position: relative;
+}
+
+/* prevent the color to be override when there's an error */
+.container input {
+    color: var(--Cod-gray) !important;
+    border-color: var(--Cod-gray) !important;
+}
+
+.container > img {   /* arrow icon */
+    position: absolute;
+    top: 7px;
+    right: 16px;
+}
+
+.arrow-up {
+    transform: rotate(180deg);
+    transition: transform 0.2s;
+}
+
+.arrow-down {
+    transform: rotate(0);
+    transition: transform 0.2s;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 8px);
+    width: 110%;
+    background-color: white;
+    z-index: 3;
+    box-shadow: 0 15px 25px #38425524;
+    padding: 16px;
+}
+
+.show {
+    display: block;
+}
+
+.dropdown li {
+    width: 100%;
+    list-style: none;
+    color: var(--Cod-gray);
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    position: relative;
+    text-align: center;
+    z-index: 10;
+}
+
+.dropdown li:first-of-type {
+    margin-bottom: 16px;
+}
+
+.highlighted {
+    background-color: #11111115;
+}
+
+.dropdown li img {
+    position: absolute;
+    left: 0;
+    top: 8px;
+}

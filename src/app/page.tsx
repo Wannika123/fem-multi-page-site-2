@@ -1,95 +1,45 @@
-import Image from "next/image";
 import styles from "./page.module.css";
+import Header from "@/components/Header";
+import ResponsiveImg from "@/components/ResponsiveImg";
+import mobileHero from '@/images/homepage/hero-bg-mobile@2x.jpg';
+import tabletHero from '@/images/homepage/hero-bg-tablet@2x.jpg';
+import desktopHero from '@/images/homepage/hero-bg-desktop@2x.jpg';
+import BookBtn from "@/components/BookBtn";
+import Features from "@/components/home/Features";
+import Highlights from "@/components/home/Highlights";
+import Reserve from "@/components/home/Reserve";
+import Events from "@/components/home/Events";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <>
+      <div className="hero-img">
+        <ResponsiveImg 
+          mobileSrc={mobileHero} 
+          tabletSrc={tabletHero}
+          desktopSrc={desktopHero}
+          alt="Shrimp pasta"
         />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      </div>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
+      {/* header style is slightly different between homepage and booking page (in tablet and mobile version), so it can't be in root layout */}
+      <div className={styles['header-container']}>
+        <Header />
+      </div>
+
+      <main>
+        <section className={['center', styles.section].join(' ')}>
+          <h1>Exquisite dining <br /> since 1989</h1>
+          <p>
+            Experience our seasonal menu in beautiful country surroundings. Eat the freshest produce from the comfort of our farmhouse.
+          </p>
+          <BookBtn dark={false} />
+        </section>
+        <Features />
+        <Highlights />
+        <Events />
+        <Reserve />
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }

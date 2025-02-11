@@ -1,0 +1,154 @@
+.section {
+    position: relative;
+    background-color: var(--Cod-gray);
+    color: white;
+    margin-top: 101px;
+    padding: 72px 0 102px 0;
+}
+
+.curve-top, .curve-bottom {
+    display: none;
+}
+
+.content {
+    display: grid;
+    gap: 85px;
+}
+
+.intro-text {
+    text-align: center;
+}
+
+.intro-text h2 {
+    margin-top: 36px;
+    margin-bottom: 0.8125rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+
+.intro-text p {
+    font-size: 1rem;
+    line-height: 1.625rem;
+}
+
+.menu-img-container {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    margin-bottom: 2.25rem;
+}
+
+.menu-text-container {
+    text-align: center;
+}
+
+.menu-text-container h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.375rem;
+}
+
+.menu-text-container p {
+    font-size: 1rem;
+    line-height: 1.625rem;
+}
+
+.menus hr {
+
+    border: none;
+    border-top: 1px solid #ffffff15;
+    margin-top: 54px;
+    margin-bottom: 24px;
+}
+
+@media (min-width: 30rem) {
+    .section {
+        margin-top: 118px;
+        padding: 96px 0 96px 0;
+    }
+    .curve-top, .curve-bottom {
+        display: unset;
+        position: absolute;
+    }
+    .curve-top {
+        top: 0;
+        right: -511px;
+        translate: 0 -100%;
+    }
+    .curve-bottom {
+        bottom: 0;
+        left: -517px;
+        translate: 0 100%;
+    }
+    .content {
+        gap: 54px;
+    }
+    .intro-text {
+        width: 27.8125rem;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .intro-text h2 {
+        margin-top: 39px;
+        margin-bottom: 1.6875rem;
+        font-size: 3rem;
+        line-height: 3rem;
+    }   
+    .intro-text p {
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+    }
+    .menu {
+        display: flex;
+        gap: 62px;
+        align-items: center;
+    }
+    .menu-img-container {
+        margin: 0;
+        width: 128px;
+    }
+    .menu-text-container {
+        text-align: left;
+    }
+    .menu-text-container > div {
+        position: relative;
+    }
+    .menu-text-container > div::before {
+        content: '';
+        display: block;
+        width: 30px;
+        border-top: 1px solid var(--Beaver);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        translate: calc(-100% - 30px);
+    }
+    .menus hr {
+        margin: 24px 0;
+    }
+}
+
+@media (min-width: 65rem) {
+    .section {
+        margin-top: -80px;
+        padding: 200px 0 120px 0;
+    }
+    .curve-top {
+        right: 0;
+    }
+    .curve-bottom {
+        left: -350px;
+    }
+    .content {
+        grid-template-columns: 1fr minmax(48%, 540px);
+        gap: 125px;
+    }
+    .intro-text {
+        text-align: left;
+    }
+    .intro-text h2 {
+        margin-top: 55px;
+    }  
+    .menus {
+        margin-top: 48px;
+    }
+}

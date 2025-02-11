@@ -1,0 +1,38 @@
+.section {
+    position: relative;
+    background-color: var(--Cod-gray);
+}
+
+.content {
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: fit-content;
+}
+
+.content h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 30rem) {
+    .content h2 {
+        font-size: 3rem;
+        line-height: 3rem;
+        margin-bottom: 24px;
+    }
+}
+
+@media (min-width: 65rem) {
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

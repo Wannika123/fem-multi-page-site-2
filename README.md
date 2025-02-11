@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Mentor - Dine Website Challenge solution
 
-## Getting Started
+This is a solution to the [Dine Website Challenge challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/dine-restaurant-website-yAt7Vvxt7). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Overview
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### The challenge
 
-## Learn More
+Users should be able to:
 
-To learn more about Next.js, take a look at the following resources:
+- View the optimal layout for each page depending on their device's screen size
+- See hover states for all interactive elements throughout the site
+- See the correct content for the Family Gatherings, Special Events, and Social Events section when the user clicks each tab
+- Receive an error message when the booking form is submitted if:
+  - The `Name` or `Email Address` fields are empty should show "This field is required"
+  - The `Email Address` is not formatted correctly should show "Please use a valid email address"
+  - Any of the `Pick a date` or `Pick a time` fields are empty should show "This field is incomplete"
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Screenshot
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+![Image](https://github.com/user-attachments/assets/b9572745-2ff7-4915-b5e3-a1ba89d1d2a9)
 
-## Deploy on Vercel
+![Image](https://github.com/user-attachments/assets/60ae6810-9a0d-4414-a73c-a038cfda77c4)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Links
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Solution URL: [github repo](https://github.com/Wannika123/fem-multi-page-site-2)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
+## My process
+
+### Built with
+
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - use server action for form submission
+
+### What I learned
+
+- Never underestimate the form. I try to make it as accessible as possible. Also, I'm still not very comfortable with building custom select component, it took me so long.
+
+### Useful resources
+
+- [custom select component](https://www.youtube.com/watch?v=bAJlYgeovlg&t=3s) - I have to reference this every time I build select component.
+
+## Author
+
+- Frontend Mentor - [@Wannika123](https://www.frontendmentor.io/profile/Wannika123)

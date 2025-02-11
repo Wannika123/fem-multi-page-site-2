@@ -1,0 +1,116 @@
+.section {
+    position: relative;
+    margin-top: 80px;
+    display: grid;
+    gap: 101px;
+}
+
+.curve, .lines {
+    display: none;
+}
+
+.img-container {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+
+.text-container {
+    margin-top: 48px;
+    color: var(--Ebony-clay);
+    text-align: center;
+}
+
+.text-container h2 {
+    margin-bottom: 0.8125rem;
+    margin-top: 36px;
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+
+.text-container p {
+    font-size: 1rem;
+    line-height: 1.625rem;
+}
+
+@media (min-width: 30rem) {
+    .section {
+        margin-top: 120px;
+        gap: 118px;
+    }
+    .curve {
+        display: unset;
+        position: absolute;
+        left: -517px;
+        top: 196px;
+    }
+    .img-container {
+        max-width: 573px;
+    }
+    .lines {
+        display: unset;
+        position: absolute;
+        right: -58px;
+        top: 63%;
+    }
+    .text-container {
+        margin: 0 auto;
+        margin-top: 56px;
+        width: 29rem;
+        max-width: 100%;
+    }
+    .text-container h2 {
+        font-size: 3rem;
+        line-height: 3rem;
+        margin-top: 39px;
+        margin-bottom: 1.6875rem;
+    }
+    .text-container p {
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+    }
+}
+
+@media (min-width: 65rem) {
+    .section {
+        margin-top: 128px;
+        gap: 121px;
+    }
+    .curve {
+        left: 0;
+        top: 320px;
+    }
+    .feature {
+        display: flex;
+        gap: 125px;
+        align-items: center;
+    }
+    .feature:nth-of-type(2) {
+        flex-direction: row-reverse;
+    }
+    .img-container {
+        margin: 0;
+        width: 48%;
+        max-width: 540px;
+    }
+    .lines {
+        right: -114px;
+        top: 39%;
+    }
+    .text-container {
+        text-align: left;
+        margin: 0;
+    }
+    .feature:first-of-type .text-container {
+        translate: 0 25px;
+    }
+    .feature:nth-of-type(2) .text-container {
+        translate: 0 -25px;
+    }
+    .text-container h2 {
+        margin-top: 55px;
+    }
+}
